@@ -1,6 +1,6 @@
 ---
 title: 'Learning Lab 1 Case Study'
-author: ""
+author: "Jennifer Osterhage"
 date: "`r format(Sys.Date(),'%B %e, %Y')`"
 output:
   html_document:
@@ -63,6 +63,7 @@ the green arrow to run the code chunk.
 library(tidyverse)
 library(tidymodels)
 library(janitor)
+library(readr)
 ```
 
 Next, we'll load the *already-processed* (for this lab) data set that
@@ -99,12 +100,12 @@ Note its dimensions --- especially how many rows it has. Add a few
 dashes after the chunk with your observations.
 
 ```{r}
-
+glimpse(d)
 ```
 
 *Observations*:
 
--   
+-   There are a lot of rows - 3,793
 
 \*What other variables might we include?\*\* This is a great question to
 be asking - surely, including just the four variables we have cannot be
@@ -171,6 +172,9 @@ in the larger data. Do that in the chunk below:
 [Your Turn]{style="color: green;"} ⤵
 
 ```{r}
+data_train
+
+d
 
 ```
 
@@ -273,6 +277,7 @@ Type `final_fit` below; this is the final, fitted model---one that can
 be interpreted further in the next step!
 
 ```{r}
+final_fit
 ```
 
 You may see a message/warning above or when you examine `final_fit`; you
@@ -324,7 +329,7 @@ Let's interpret the above. If the value of `correct` is `TRUE` when the
 predicted and known code are the same, what does the `percent` column
 tell us? Add one or more notes to the dashes below:
 
--   
+-   87% of the codes were correct.
 
 A short-cut to the above is below:
 
